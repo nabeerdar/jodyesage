@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/jodyesage/static/css/main.edd63ded.css",
-    "main.js": "/jodyesage/static/js/main.68b1ade8.js",
+    "main.js": "/jodyesage/static/js/main.a666f958.js",
     "static/js/453.2e65bfe0.chunk.js": "/jodyesage/static/js/453.2e65bfe0.chunk.js",
+    "static/media/music_video_2.mp4": "/jodyesage/static/media/music_video_2.0e80ad8b9431c966f2ac.mp4",
     "static/media/camera_gif.gif": "/jodyesage/static/media/camera_gif.bb955f3a90e40d3b8a51.gif",
     "static/media/ref-photo-0-croped.png": "/jodyesage/static/media/ref-photo-0-croped.2d720a4f2223f3ef74af.png",
     "static/media/ref-photo-10.jpg": "/jodyesage/static/media/ref-photo-10.f8600cdba6db76037d49.jpg",
@@ -26,11 +27,11 @@
     "static/media/logo.svg": "/jodyesage/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/jodyesage/index.html",
     "main.edd63ded.css.map": "/jodyesage/static/css/main.edd63ded.css.map",
-    "main.68b1ade8.js.map": "/jodyesage/static/js/main.68b1ade8.js.map",
+    "main.a666f958.js.map": "/jodyesage/static/js/main.a666f958.js.map",
     "453.2e65bfe0.chunk.js.map": "/jodyesage/static/js/453.2e65bfe0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.edd63ded.css",
-    "static/js/main.68b1ade8.js"
+    "static/js/main.a666f958.js"
   ]
 }
