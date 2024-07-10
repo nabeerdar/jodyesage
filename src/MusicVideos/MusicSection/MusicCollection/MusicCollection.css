@@ -1,0 +1,369 @@
+
+.body1 {
+  margin: 20px;
+  max-width: 4000px;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.h11 {
+  font-size: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.container11 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+}
+
+.item {
+  position: relative;
+  width: calc(33.33% - 10px);
+  padding-top: 33.33%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+
+@media (max-width: 750px) {
+  .body1 {
+    margin: -5px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .details-section {
+    display: none;
+  }
+  .comments-section {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .comment-input-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    margin-top: 20px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .container11 {}
+
+  .body1 {
+    margin: -5px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .item {
+    width: 45%;
+    padding-top: 45%;
+  }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  max-height: 600px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.additional-content {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details-section {
+  position: absolute;
+  top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  margin-left: -15px;
+  /* margin: 10px 0; */
+}
+
+.comments-section {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.comments-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.comments-section ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background: #f0f0f0;
+}
+
+.comment-input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #ccc;
+}
+
+.comment-input-section input {
+  flex: 1;
+  padding: 10px;
+  outline: none;
+  border: none; 
+}
+
+.comment-input-section button {
+  padding: 10px 20px;
+  border: none;
+  background-color: transparent;
+  color:  #0095F6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.comment-input-section button.disabled {
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+.comment-input-section button.enabled {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.modal-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nav-arrow {
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: lighter;
+  pointer-events: auto;
+  position: fixed;
+}
+
+.nav-arrow.left {
+  left: 10px;
+}
+
+.nav-arrow.right {
+  right: 10px;
+}
+
+.nav-arrow:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: lighter;
+  z-index: 1001;
+}
+
+.close:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Modal Styles */
+@media (max-width: 800px) {
+  .modal-content {
+    flex-direction: column;
+    max-height: 550px;
+    max-width: 360px;
+  }
+
+  .image-container,
+  .additional-content {
+    width: 100%;
+    height: 50%;
+  }
+
+  .comment-section2 {
+    width: 100%;
+    justify-content: left;
+    margin-bottom: 5px;
+  }
+
+  .comment-icon {
+    margin-right: 5px;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    color: rgb(255, 255, 255);
+    font-size: 28px;
+    cursor: pointer;
+    font-weight: lighter;
+    z-index: 1001;
+  }
+
+  .nav-arrow {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: lighter;
+    pointer-events: auto;
+    position: fixed;
+  }
+
+  .name-section1 {
+    width: 100%;
+    position: relative;
+    margin-left: 10px;
+    height: 10%;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 3000px) {
+  .comment-input-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-left: -15px;
+    width: 53%;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+.like-section {
+  width: 70%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-top: 1px solid #ccc;
+  margin-left: -15px;
+  bottom: 40px;
+}
+
+.like-section .icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.like-section .likes-count {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: black; /* Adjust color as needed */
+}
+
+}
+
+
+.like-section {
+  display: flex;
+
+  flex-direction: column;
+  align-items: left;
+}
+
+.like-section .icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.like-section .likes-count {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 13px;
+  color: black; /* Adjust color as needed */
+}
