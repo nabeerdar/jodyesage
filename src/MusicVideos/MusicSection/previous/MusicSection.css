@@ -1,0 +1,188 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+  }
+  
+.img-style{
+    width: 200px;
+}
+
+
+.carousel-container {
+margin-top: 50px;
+position: relative;
+width: 50%; 
+max-width: 500px; 
+}
+
+.music-cover {
+width:300px;
+height: auto;
+}
+
+.nav-button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+
+z-index: 2;
+}
+
+.nav-button.left, .nav-button.right {
+right: -40px;
+border: 0; 
+}
+
+.nav-button.left {
+right: 120px;
+margin-top: 31%;
+
+}
+
+.nav-button.right {
+right: 120px;
+margin-top: 23%;
+
+}
+
+.radio-buttons {
+position: absolute;
+bottom: -20px;
+left: 35%;
+transform: translateX(-50%);
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.radio-button {
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #ddd;
+margin: 0 5px;
+}
+
+.radio-button.active {
+background-color: #333;
+}
+
+.album-details {
+position: absolute;
+top: 45%;
+left: 60%; 
+transform: translateY(-50%);
+text-align: left;
+width: 200px; 
+}
+
+.release-date {
+font-size: 14px;
+color: #666;
+}
+
+.album-title {
+font-size: 24px;
+font-weight: bold;
+margin: 10px 0;
+}
+
+.album-action {
+font-size: 18px;
+color: #ff6600;
+}
+
+.view-all {
+position: absolute;
+
+margin-top: 500px;
+right: 10px;
+padding: 10px 20px;
+font-size: 14px;
+cursor: pointer;
+border: none;
+background-color: transparent;
+color: #000;
+}
+
+.background-section {
+position: relative;
+bottom: -50px;
+width: 100%;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+}
+
+.background-text {
+font-size: 150px;
+color: rgba(0, 0, 0, 0.1);
+position: absolute;
+z-index: -1;
+}
+
+@media (max-width: 600px) {
+.carousel-container {
+    width: 100%;
+}
+
+/* .nav-button.left, .nav-button.right {
+    top: 40%;
+}
+*/
+.album-details {
+    position: static;
+    margin-top: 20px;
+    transform: none;
+    text-align: center;
+    width: auto;
+}
+
+.view-all {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+}
+}
+
+
+
+
+@media (max-width: 1040px) {
+
+    .music-cover{
+    justify-content: center;
+    display: grid;
+    margin-left:70px;
+    }
+    .nav-button.left {
+    right: 15px;
+    margin-top: 31%;
+    
+    }
+    
+    .nav-button.right {
+    right: 15px;
+    margin-top: 21%;
+
+    }
+    .radio-buttons {
+    position: absolute;
+    bottom: -20px;
+    left: 55%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    }
+    
+}
