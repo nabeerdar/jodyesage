@@ -1,0 +1,198 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@638&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@1,681&display=swap');
+
+.video-section {
+    position: relative;
+    min-height: 400px;
+    width: 100vw;
+    height: 50vh;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: 638;
+    font-style: normal;
+    display: flex;
+    /* overflow: hidden; */
+    /* background: url('../images/croped.PNG') center center / cover no-repeat; */
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Cinzel', serif;
+}
+
+.jodye-sage-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.397);
+    width: 5vw;
+    height: 100%;
+}
+
+.jodye-sage {
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    color: pink;
+}
+
+.sage {
+    margin-top: 27px;
+}
+
+.jodye-sage-text {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.jodye-sage-text-item {
+    align-self: center;
+}
+
+.music-text-gif-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: aquamarine; */
+    /* z-index: 1000; */
+}
+
+.music-text-gif-wrapper {
+    width: 100%;
+    /* background-color: azure; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.music-text-wrapper {
+    /* background-color: rgb(184, 69, 34); */
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.bigger-picture-text {
+    font-size: 80px;
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+    color:hsl(from white h s l);
+    z-index: 1;
+}
+
+.gif-wrapper {
+    display: inline-flex;
+    justify-content: flex-start;
+    padding-left: 0.5em;
+}
+
+.gif {
+    position: relative;
+    /* background-color: antiquewhite; */
+    width: 210px;
+    height: 140px;
+    z-index: 1000;
+    opacity: 0.6;
+    object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .bigger-picture-text {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 992px) {
+    .bigger-picture-text {
+        font-size: 60px;
+    }
+
+    .gif {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 850px) {
+    .bigger-picture-text {
+        font-size: 55px;
+    }
+
+    .gif {
+        width: 180px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .music-text-gif-container {
+        align-items: flex-end;
+        padding-bottom: 4%;
+    }
+
+    .bigger-picture-text {
+        font-size: 50px;
+    }
+
+    .gif {
+        width: 150px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .bigger-picture-text {
+        font-size: 40px;
+    }
+
+    .gif {
+        width: 120px;
+        height: 80px;
+    }
+
+    .jodye-sage {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .bigger-picture-text {
+        font-size: 30px;
+    }
+
+    .gif {
+        width: 100px;
+        height: 60px;
+    }
+
+    .jodye-sage {
+        font-size: 20px;
+    }
+}
